@@ -1,0 +1,328 @@
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Sunil Ratoki</title>
+
+    <link rel="preload" as="style" href="/build/assets/app-BULyC2qN.css" /><link rel="modulepreload" as="script" href="/build/assets/app-DHKx2lXR.js" /><link rel="stylesheet" href="/build/assets/app-BULyC2qN.css" /><script type="module" src="/build/assets/app-DHKx2lXR.js"></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #030712;
+            color: #f8fafc;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden;
+        }
+
+        #three-background {
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.045);
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+        }
+
+        .gradient-text {
+            background: linear-gradient(100deg, #fff 15%, #67e8f9 55%, #818cf8 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-link {
+            color: #94a3b8;
+            white-space: nowrap;
+            transition: .3s ease;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: #67e8f9;
+        }
+
+        .project-card {
+            transition: transform .35s ease, border-color .35s ease, background .35s ease;
+            min-width: 0;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(103, 232, 249, .4);
+            background: rgba(255, 255, 255, .07);
+        }
+
+        .project-preview {
+            background:
+                radial-gradient(circle at 20% 20%, rgba(34, 211, 238, .18), transparent 35%),
+                radial-gradient(circle at 80% 80%, rgba(99, 102, 241, .20), transparent 40%),
+                #0b1222;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .tech-tag {
+            background: rgba(103, 232, 249, .08);
+            border: 1px solid rgba(103, 232, 249, .15);
+            color: #a5f3fc;
+        }
+
+        @media (max-width: 640px) {
+            .nav-links {
+                gap: 12px;
+                font-size: 11px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                transition-duration: .01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body class="min-h-screen">
+
+    <div id="three-background"></div>
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 px-4 md:px-12 py-5">
+
+        <nav class="glass max-w-7xl mx-auto rounded-2xl px-5 md:px-7 py-4 flex items-center justify-between">
+
+            <a href="/" class="text-2xl font-black tracking-tight">
+                SR<span class="text-cyan-400">.</span>
+            </a>
+
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/skills.html" class="nav-link">Skills</a>
+                <a href="/projects.html" class="nav-link active">Projects</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+            </div>
+
+            <a href="/contact.html"
+                class="rounded-full bg-cyan-400 text-slate-950 px-5 py-2.5 text-sm font-bold hover:bg-cyan-300 transition">
+                Let's Talk ↗
+            </a>
+
+        </nav>
+    </header>
+
+    <main class="mx-auto max-w-6xl px-6">
+
+        <!-- Hero -->
+        <section class="reveal flex min-h-[65vh] flex-col justify-center pt-32">
+
+            <p class="mb-5 text-sm font-semibold tracking-[.35em] text-cyan-400">
+                WHAT I'VE BEEN BUILDING
+            </p>
+
+            <h1 class="text-5xl font-black leading-tight md:text-7xl">
+                MY <span class="gradient-text">PROJECTS.</span>
+            </h1>
+
+            <p class="mt-6 max-w-2xl text-base leading-8 text-slate-400 md:text-lg">
+                A collection of projects I've built while learning web development.
+                Each project helps me understand new technologies and improve my
+                problem-solving skills.
+            </p>
+
+            <div class="mt-8 flex items-center gap-3 text-sm text-slate-500">
+                <span class="h-2 w-2 rounded-full bg-cyan-400"></span>
+                Learning by building, improving with every project.
+            </div>
+
+        </section>
+
+        <!-- Projects -->
+        <section class="pb-28">
+
+            <div class="reveal mb-10">
+                <p class="text-sm tracking-[.25em] text-cyan-400">
+                    SELECTED WORK
+                </p>
+
+                <h2 class="mt-3 text-3xl font-bold md:text-4xl">
+                    Things I've <span class="gradient-text">Created.</span>
+                </h2>
+            </div>
+
+            <!-- Single Project Grid -->
+            <div class="grid grid-cols-1 gap-7 md:grid-cols-2">
+
+                
+                    <div class="col-span-full glass rounded-3xl px-8 py-16 text-center">
+
+                        <h3 class="text-2xl font-bold">
+                            Projects Coming Soon.
+                        </h3>
+
+                        <p class="mt-4 text-slate-400">
+                            I'm currently working on new projects. Check back soon!
+                        </p>
+
+                    </div>
+
+                
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+        <section
+            class="reveal mb-24 rounded-3xl border border-cyan-400/15 bg-cyan-400/5 px-7 py-12 text-center md:px-16">
+
+            <p class="text-sm tracking-[.25em] text-cyan-400">
+                WHAT'S NEXT?
+            </p>
+
+            <h2 class="mt-4 text-3xl font-bold md:text-4xl">
+                More ideas. More <span class="gradient-text">building.</span>
+            </h2>
+
+            <p class="mx-auto mt-4 max-w-xl leading-7 text-slate-400">
+                I'm continuously learning and working on new projects.
+                Let's connect and build something meaningful.
+            </p>
+
+            <a href="/contact.html"
+                class="mt-8 inline-flex rounded-xl bg-cyan-400 px-7 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300">
+                Contact Me →
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Footer</title>
+    <style>
+        .social-link {
+            display: inline-flex;
+            padding: 10px 16px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 999px;
+            color: #cbd5e1;
+            font-size: 13px;
+            transition: .3s ease;
+        }
+
+        .social-link:hover {
+            color: #22d3ee;
+            border-color: rgba(34, 211, 238, .5);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <footer class="px-6 md:px-16 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto">
+
+            <div class="glass rounded-3xl p-8 md:p-12">
+
+                <div class="grid md:grid-cols-2 gap-10">
+
+                    <!-- BRAND -->
+                    <div>
+
+
+                        <p class="text-slate-400 leading-7 mt-5 max-w-md">
+                            Building ideas into meaningful digital experiences.
+                            Exploring full-stack development and cybersecurity.
+                        </p>
+                    </div>
+
+                    <!-- SOCIAL LINKS -->
+                    <div>
+                        <h3 class="text-lg font-bold mb-5">
+                            Connect With Me
+                        </h3>
+
+                        <div class="flex flex-wrap gap-3">
+
+                            <a href="https://www.instagram.com/sunilchhetrii3/" target="_blank"
+                                rel="noopener noreferrer" class="social-link">Instagram ↗</a>
+
+                            <a href="https://www.facebook.com/profile.php?id=61578550240858" target="_blank"
+                                rel="noopener noreferrer" class="social-link">Facebook ↗</a>
+
+                            <a href="https://www.tiktok.com/@sunil.chhetri122?lang=en" target="_blank"
+                                rel="noopener noreferrer" class="social-link">TikTok ↗</a>
+
+                            <a href="https://github.com/sunilratoki3-hash" target="_blank" rel="noopener noreferrer"
+                                class="social-link">GitHub ↗</a>
+
+                            <a href="https://www.linkedin.com/in/sunil-ratoki-669823344/" target="_blank"
+                                rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
+
+                        </div>
+
+                        <!-- CONTACT BUTTONS -->
+                        <div class="flex flex-wrap gap-3 mt-6">
+
+                            <a href="https://wa.me/9705027656?text=Hello%20Sunil%2C%20I%20visited%20your%20portfolio."
+                                target="_blank" rel="noopener noreferrer"
+                                class="rounded-full bg-green-500 text-white px-5 py-3 text-sm font-bold hover:bg-green-400 transition">
+                                WhatsApp Me ↗
+                            </a>
+                            <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Sunil,"
+                                class="rounded-full bg-violet-500 text-white px-5 py-3 text-sm font-bold hover:bg-violet-400 transition">
+                                Mail Me ↗
+                            </a>
+                            <a href="tel:+9779705027656"
+                                class="rounded-full bg-cyan-400 text-slate-950 px-5 py-3 text-sm font-bold hover:bg-cyan-300 transition">
+                                Call Me ↗
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="section-line my-9"></div>
+
+                <div class="flex flex-col md:flex-row justify-center gap-4 text-sm text-slate-500">
+                    <p>© 2026 Sunil Ratoki. All rights reserved.</p>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
+
+</body>
+
+</html>
+
