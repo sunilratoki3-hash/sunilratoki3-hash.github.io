@@ -9,12 +9,17 @@
     <title>Sunil Ratoki | Full-Stack Developer</title>
 
     <meta name="description"
-        content="Sunil Ratoki — Full-Stack Developer exploring modern web development, Laravel, JavaScript, and cybersecurity.">
+        content="Sunil Ratoki — B.Sc. CSIT student and Full-Stack Developer exploring Laravel, JavaScript, modern web development, and cybersecurity.">
 
-    <link rel="preload" as="style" href="/build/assets/app-BULyC2qN.css" />
-    <link rel="modulepreload" as="script" href="/build/assets/app-DHKx2lXR.js" />
-    <link rel="stylesheet" href="/build/assets/app-BULyC2qN.css" />
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
+    <!-- PRODUCTION ASSETS -->
+    <link rel="preload" as="style" href="/build/assets/app-BULyC2qN.css">
+    <link rel="modulepreload" as="script" href="/build/assets/app-DHKx2lXR.js">
+    <link rel="stylesheet" href="/build/assets/app-BULyC2qN.css">
     <script type="module" src="/build/assets/app-DHKx2lXR.js"></script>
+
     <style>
         * {
             box-sizing: border-box;
@@ -102,6 +107,9 @@
         }
 
         .tech-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             transition: .3s ease;
         }
 
@@ -109,6 +117,46 @@
             border-color: rgba(34, 211, 238, .5);
             color: #67e8f9;
             transform: translateY(-3px);
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            padding: 11px 16px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 999px;
+            color: #cbd5e1;
+            font-size: 13px;
+            transition: .3s ease;
+        }
+
+        .social-link:hover {
+            color: #22d3ee;
+            border-color: rgba(34, 211, 238, .5);
+            background: rgba(34, 211, 238, .06);
+            transform: translateY(-3px);
+        }
+
+        .footer-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            border: 1px solid rgba(255, 255, 255, .12);
+            color: #94a3b8;
+            background: rgba(255, 255, 255, .03);
+            transition: .3s ease;
+        }
+
+        .footer-social:hover {
+            color: #22d3ee;
+            border-color: rgba(34, 211, 238, .5);
+            background: rgba(34, 211, 238, .08);
+            transform: translateY(-4px);
         }
 
         .reveal {
@@ -147,21 +195,45 @@
 
             <nav class="glass max-w-7xl mx-auto rounded-2xl px-5 md:px-7 py-4 flex items-center justify-between">
 
-                <a href="/" class="text-2xl font-black tracking-tight">
+                <a href="/" class="text-2xl font-black tracking-tight" aria-label="Home">
                     SR<span class="text-cyan-400">.</span>
                 </a>
 
-                <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="/" class="nav-link active">Home</a>
-                    <a href="/about.html" class="nav-link">About</a>
-                    <a href="/skills.html" class="nav-link">Skills</a>
-                    <a href="/projects.html" class="nav-link">Projects</a>
-                    <a href="/contact.html" class="nav-link">Contact</a>
+                <div class="desktop-nav hidden md:flex items-center gap-8 text-sm font-medium">
+
+                    <a href="/" class="nav-link active">
+                        <i class="fa-solid fa-house mr-1.5 text-xs"></i>
+                        Home
+                    </a>
+
+                    <a href="/about.html" class="nav-link">
+                        <i class="fa-solid fa-user mr-1.5 text-xs"></i>
+                        About
+                    </a>
+
+                    <a href="/skills.html" class="nav-link">
+                        <i class="fa-solid fa-code mr-1.5 text-xs"></i>
+                        Skills
+                    </a>
+
+                    <a href="/projects.html" class="nav-link">
+                        <i class="fa-solid fa-layer-group mr-1.5 text-xs"></i>
+                        Projects
+                    </a>
+
+                    <a href="/contact.html" class="nav-link">
+                        <i class="fa-solid fa-envelope mr-1.5 text-xs"></i>
+                        Contact
+                    </a>
+
                 </div>
 
                 <a href="/contact.html"
-                    class="rounded-full bg-cyan-400 text-slate-950 px-5 py-2.5 text-sm font-bold hover:bg-cyan-300 transition">
-                    Let's Talk ↗
+                    class="rounded-full bg-cyan-400 text-slate-950 px-4 md:px-5 py-2.5 text-sm font-bold hover:bg-cyan-300 transition">
+
+                    <i class="fa-regular fa-paper-plane mr-1.5"></i>
+                    Let's Talk
+
                 </a>
 
             </nav>
@@ -170,7 +242,7 @@
 
         <main>
 
-            <!-- HERO -->
+            <!-- HERO SECTION -->
             <section class="min-h-screen flex items-center px-6 md:px-16 pt-36 pb-20">
 
                 <div class="max-w-7xl mx-auto w-full">
@@ -189,12 +261,14 @@
                                 </span>
 
                                 <span class="text-xs sm:text-sm text-slate-300">
+                                    <i class="fa-solid fa-graduation-cap text-cyan-400 mr-1"></i>
                                     BSc CSIT Student · Full-Stack Developer
                                 </span>
 
                             </div>
 
                             <p class="text-cyan-400 tracking-[.35em] text-xs font-bold mb-6 reveal">
+                                <i class="fa-solid fa-terminal mr-2"></i>
                                 HELLO, I'M SUNIL RATOKI
                             </p>
 
@@ -221,13 +295,21 @@
                             <div class="flex flex-wrap gap-4 mt-9 reveal">
 
                                 <a href="/contact.html"
-                                    class="rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
-                                    Let's Work Together ↗
+                                    class="inline-flex items-center gap-3 rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
+
+                                    <i class="fa-solid fa-handshake"></i>
+                                    Let's Work Together
+                                    <i class="fa-solid fa-arrow-right-long"></i>
+
                                 </a>
 
                                 <a href="/projects.html"
-                                    class="rounded-full border border-white/15 bg-white/5 px-8 py-4 font-semibold text-white hover:border-cyan-400/50 hover:text-cyan-300 transition">
-                                    View Projects →
+                                    class="inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-8 py-4 font-semibold text-white hover:border-cyan-400/50 hover:text-cyan-300 transition">
+
+                                    <i class="fa-solid fa-folder-open"></i>
+                                    View Projects
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+
                                 </a>
 
                             </div>
@@ -236,17 +318,17 @@
                             <div class="flex flex-wrap gap-x-8 gap-y-4 mt-12 text-sm text-slate-400 reveal">
 
                                 <div class="flex items-center gap-2">
-                                    <span class="text-cyan-400">✦</span>
+                                    <i class="fa-solid fa-code text-cyan-400"></i>
                                     Full-Stack Development
                                 </div>
 
                                 <div class="flex items-center gap-2">
-                                    <span class="text-violet-400">✦</span>
+                                    <i class="fa-solid fa-shield-halved text-violet-400"></i>
                                     Cybersecurity
                                 </div>
 
                                 <div class="flex items-center gap-2">
-                                    <span class="text-blue-400">✦</span>
+                                    <i class="fa-solid fa-lightbulb text-blue-400"></i>
                                     Continuous Learning
                                 </div>
 
@@ -271,6 +353,7 @@
                                     </div>
 
                                     <span class="text-xs text-slate-500 font-mono">
+                                        <i class="fa-solid fa-file-code mr-1"></i>
                                         developer.js
                                     </span>
 
@@ -328,7 +411,7 @@
 
                                     <div
                                         class="w-12 h-12 rounded-xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center text-cyan-300 text-xl">
-                                        &lt;/&gt;
+                                        <i class="fa-solid fa-code"></i>
                                     </div>
 
                                 </div>
@@ -354,6 +437,7 @@
                     <div class="text-center reveal">
 
                         <p class="text-cyan-400 text-xs tracking-[.35em] font-bold mb-5">
+                            <i class="fa-solid fa-microchip mr-2"></i>
                             TECHNOLOGIES I WORK WITH
                         </p>
 
@@ -370,14 +454,50 @@
 
                     <div class="flex flex-wrap justify-center gap-3 mt-12 reveal">
 
-                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">Laravel</span>
-                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">PHP</span>
-                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">JavaScript</span>
-                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">Tailwind CSS</span>
-                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">SQL</span>
-                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">HTML & CSS</span>
-                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">Git</span>
-                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">GitHub</span>
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-solid fa-code text-red-400"></i>
+                            Laravel
+                        </span>
+
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-brands fa-php text-indigo-300"></i>
+                            PHP
+                        </span>
+
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-brands fa-js text-yellow-400"></i>
+                            JavaScript
+                        </span>
+
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-solid fa-wind text-cyan-300"></i>
+                            Tailwind CSS
+                        </span>
+
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-solid fa-database text-blue-400"></i>
+                            SQL
+                        </span>
+
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-brands fa-html5 text-orange-400"></i>
+                            HTML
+                        </span>
+
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-brands fa-css3-alt text-blue-400"></i>
+                            CSS
+                        </span>
+
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-brands fa-git-alt text-orange-400"></i>
+                            Git
+                        </span>
+
+                        <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
+                            <i class="fa-brands fa-github text-white"></i>
+                            GitHub
+                        </span>
 
                     </div>
 
@@ -398,48 +518,55 @@
                         <div class="reveal">
 
                             <p class="text-cyan-400 text-xs tracking-[.35em] font-bold mb-5">
+                                <i class="fa-solid fa-layer-group mr-2"></i>
                                 FEATURED PROJECTS
                             </p>
 
                             <h2 class="text-3xl md:text-5xl font-bold leading-tight">
                                 Projects that <span class="gradient-text">showcase my skills.</span>
                             </h2>
-                            <a href="/projects.html"
-                                class="text-cyan-300 font-semibold hover:text-white transition reveal">
-                                View All Projects ↗
-                            </a>
-
-
-                            <div class="mt-14">
-
-                                <div class="project-card glass rounded-3xl p-10 md:p-16 text-center reveal">
-
-                                    <p class="text-cyan-300 text-xs tracking-[.35em] font-bold mb-6">
-                                        MY PROJECTS
-                                    </p>
-
-                                    <h3 class="text-3xl md:text-5xl font-black leading-tight">
-                                        Something meaningful.
-                                        <span class="gradient-text">Coming Soon.</span>
-                                    </h3>
-
-                                    <p class="text-slate-400 leading-8 mt-6 max-w-2xl mx-auto">
-                                        I'm currently exploring new technologies and building
-                                        projects that turn ideas into meaningful digital experiences.
-                                        Stay tuned for what's next.
-                                    </p>
-
-                                    <a href="/projects.html"
-                                        class="inline-block mt-9 rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
-                                        Explore Projects →
-                                    </a>
-
-                                </div>
-
-                            </div>
-
 
                         </div>
+                    </div>
+
+                    <div class="mt-14">
+
+                        <div class="project-card glass rounded-3xl p-10 md:p-16 text-center reveal">
+
+                            <div
+                                class="w-16 h-16 rounded-2xl bg-cyan-400/10 border border-cyan-400/20 flex items-center justify-center mx-auto mb-8">
+                                <i class="fa-solid fa-rocket text-2xl text-cyan-300"></i>
+                            </div>
+
+                            <p class="text-cyan-300 text-xs tracking-[.35em] font-bold mb-6">
+                                MY PROJECTS
+                            </p>
+
+                            <h3 class="text-3xl md:text-5xl font-black leading-tight">
+                                Something meaningful.
+                                <span class="gradient-text">Coming Soon.</span>
+                            </h3>
+
+                            <p class="text-slate-400 leading-8 mt-6 max-w-2xl mx-auto">
+                                I'm currently exploring new technologies and building
+                                projects that turn ideas into meaningful digital experiences.
+                                Stay tuned for what's next.
+                            </p>
+
+                            <a href="/projects.html"
+                                class="inline-flex items-center gap-3 mt-9 rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
+
+                                <i class="fa-solid fa-folder-open"></i>
+                                Explore Projects
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
 
             </section>
 
@@ -456,6 +583,7 @@
                         <div class="reveal">
 
                             <p class="text-cyan-400 text-xs tracking-[.35em] font-bold mb-5">
+                                <i class="fa-solid fa-user-astronaut mr-2"></i>
                                 A LITTLE ABOUT ME
                             </p>
 
@@ -464,9 +592,27 @@
                                 <span class="gradient-text">Driven to build.</span>
                             </h2>
 
+                            <div class="flex flex-wrap gap-3 mt-8">
+
+                                <span class="glass rounded-full px-4 py-2 text-sm text-slate-300">
+                                    <i class="fa-solid fa-graduation-cap text-cyan-400 mr-2"></i>
+                                    CSIT Student
+                                </span>
+
+                                <span class="glass rounded-full px-4 py-2 text-sm text-slate-300">
+                                    <i class="fa-solid fa-code text-violet-400 mr-2"></i>
+                                    Developer
+                                </span>
+
+                            </div>
+
                         </div>
 
                         <div class="glass rounded-3xl p-8 md:p-10 reveal">
+
+                            <div class="text-3xl text-cyan-300 mb-6">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
 
                             <p class="text-slate-300 leading-8">
                                 I'm a BSc CSIT student at Maharishi College,
@@ -482,8 +628,11 @@
                             </p>
 
                             <a href="/about.html"
-                                class="inline-block mt-8 text-cyan-300 font-semibold hover:text-white transition">
-                                More About Me ↗
+                                class="inline-flex items-center gap-3 mt-8 text-cyan-300 font-semibold hover:text-white transition">
+
+                                More About Me
+                                <i class="fa-solid fa-arrow-right-long"></i>
+
                             </a>
 
                         </div>
@@ -504,6 +653,11 @@
 
                     <div class="glass rounded-[2rem] p-9 md:p-16 text-center reveal">
 
+                        <div
+                            class="w-16 h-16 rounded-2xl bg-violet-400/10 border border-violet-400/20 flex items-center justify-center mx-auto mb-8">
+                            <i class="fa-solid fa-paper-plane text-2xl text-violet-300"></i>
+                        </div>
+
                         <p class="text-cyan-400 text-xs tracking-[.35em] font-bold mb-7">
                             HAVE AN IDEA?
                         </p>
@@ -521,13 +675,20 @@
                         <div class="flex flex-wrap justify-center gap-4 mt-9">
 
                             <a href="/contact.html"
-                                class="rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
-                                Get In Touch ↗
+                                class="inline-flex items-center gap-3 rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
+
+                                <i class="fa-solid fa-envelope"></i>
+                                Get In Touch
+                                <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+
                             </a>
 
                             <a href="/projects.html"
-                                class="rounded-full border border-white/15 px-8 py-4 font-semibold text-white hover:border-cyan-400/50 hover:text-cyan-300 transition">
+                                class="inline-flex items-center gap-3 rounded-full border border-white/15 px-8 py-4 font-semibold text-white hover:border-cyan-400/50 hover:text-cyan-300 transition">
+
+                                <i class="fa-solid fa-folder-open"></i>
                                 Explore Projects
+
                             </a>
 
                         </div>
@@ -544,118 +705,151 @@
         <!-- FOOTER -->
         <footer class="px-6 md:px-16 pb-8">
 
-            <div
-                class="max-w-7xl mx-auto border-t border-white/10 pt-7 flex flex-col md:flex-row justify-between gap-4 text-sm text-slate-500">
+            <div class="max-w-7xl mx-auto">
 
+                <div class="section-line mb-10"></div>
 
+                <div class="glass rounded-3xl p-8 md:p-10">
 
-            </div>
-            <!DOCTYPE html>
-            <html lang="en">
+                    <div class="grid md:grid-cols-2 gap-10">
 
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <meta http-equiv="X-UA-Compatible" content="ie=edge">
-                <title>Footer</title>
-                <style>
-                    .social-link {
-                        display: inline-flex;
-                        padding: 10px 16px;
-                        border: 1px solid rgba(255, 255, 255, .12);
-                        border-radius: 999px;
-                        color: #cbd5e1;
-                        font-size: 13px;
-                        transition: .3s ease;
-                    }
+                        <!-- BRAND -->
+                        <div>
 
-                    .social-link:hover {
-                        color: #22d3ee;
-                        border-color: rgba(34, 211, 238, .5);
-                        transform: translateY(-3px);
-                    }
-                </style>
-            </head>
+                            <a href="/" class="text-3xl font-black tracking-tight">
+                                SR<span class="text-cyan-400">.</span>
+                            </a>
 
-            <body>
+                            <p class="text-slate-400 leading-7 mt-5 max-w-md">
+                                Building ideas into meaningful digital experiences.
+                                Exploring full-stack development and cybersecurity.
+                            </p>
 
-                <footer class="px-6 md:px-16 pt-16 pb-8">
-                    <div class="max-w-7xl mx-auto">
+                            <div class="flex flex-wrap gap-3 mt-7">
 
-                        <div class="glass rounded-3xl p-8 md:p-12">
+                                <span class="text-xs text-slate-500 flex items-center gap-2">
+                                    <i class="fa-solid fa-code text-cyan-400"></i>
+                                    Web Development
+                                </span>
 
-                            <div class="grid md:grid-cols-2 gap-10">
+                                <span class="text-xs text-slate-500 flex items-center gap-2">
+                                    <i class="fa-solid fa-shield-halved text-violet-400"></i>
+                                    Cybersecurity
+                                </span>
 
-                                <!-- BRAND -->
-                                <div>
-
-
-                                    <p class="text-slate-400 leading-7 mt-5 max-w-md">
-                                        Building ideas into meaningful digital experiences.
-                                        Exploring full-stack development and cybersecurity.
-                                    </p>
-                                </div>
-
-                                <!-- SOCIAL LINKS -->
-                                <div>
-                                    <h3 class="text-lg font-bold mb-5">
-                                        Connect With Me
-                                    </h3>
-
-                                    <div class="flex flex-wrap gap-3">
-
-                                        <a href="https://www.instagram.com/sunilchhetrii3/" target="_blank"
-                                            rel="noopener noreferrer" class="social-link">Instagram ↗</a>
-
-                                        <a href="https://www.facebook.com/profile.php?id=61578550240858" target="_blank"
-                                            rel="noopener noreferrer" class="social-link">Facebook ↗</a>
-
-                                        <a href="https://www.tiktok.com/@sunil.chhetri122?lang=en" target="_blank"
-                                            rel="noopener noreferrer" class="social-link">TikTok ↗</a>
-
-                                        <a href="https://github.com/sunilratoki3-hash" target="_blank"
-                                            rel="noopener noreferrer" class="social-link">GitHub ↗</a>
-
-                                        <a href="https://www.linkedin.com/in/sunil-ratoki-669823344/" target="_blank"
-                                            rel="noopener noreferrer" class="social-link">LinkedIn ↗</a>
-
-                                    </div>
-
-                                    <!-- CONTACT BUTTONS -->
-                                    <div class="flex flex-wrap gap-3 mt-6">
-
-                                        <a href="https://wa.me/9705027656?text=Hello%20Sunil%2C%20I%20visited%20your%20portfolio."
-                                            target="_blank" rel="noopener noreferrer"
-                                            class="rounded-full bg-green-500 text-white px-5 py-3 text-sm font-bold hover:bg-green-400 transition">
-                                            WhatsApp Me ↗
-                                        </a>
-                                        <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry&body=Hello%20Sunil,"
-                                            class="rounded-full bg-violet-500 text-white px-5 py-3 text-sm font-bold hover:bg-violet-400 transition">
-                                            Mail Me ↗
-                                        </a>
-                                        <a href="tel:+9779705027656"
-                                            class="rounded-full bg-cyan-400 text-slate-950 px-5 py-3 text-sm font-bold hover:bg-cyan-300 transition">
-                                            Call Me ↗
-                                        </a>
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="section-line my-9"></div>
-
-                            <div class="flex flex-col md:flex-row justify-center gap-4 text-sm text-slate-500">
-                                <p>© 2026 Sunil Ratoki. All rights reserved.</p>
                             </div>
 
                         </div>
+
+
+                        <!-- SOCIAL LINKS -->
+                        <div>
+
+                            <h3 class="text-lg font-bold mb-5">
+                                Connect With Me
+                            </h3>
+
+                            <div class="flex flex-wrap gap-3">
+
+                                <a href="https://www.instagram.com/sunilchhetrii3/" target="_blank"
+                                    rel="noopener noreferrer" class="footer-social" aria-label="Instagram">
+
+                                    <i class="fa-brands fa-instagram text-lg"></i>
+
+                                </a>
+
+                                <a href="https://www.facebook.com/profile.php?id=61578550240858" target="_blank"
+                                    rel="noopener noreferrer" class="footer-social" aria-label="Facebook">
+
+                                    <i class="fa-brands fa-facebook-f text-lg"></i>
+
+                                </a>
+
+                                <a href="https://www.tiktok.com/@sunil.chhetri122?lang=en" target="_blank"
+                                    rel="noopener noreferrer" class="footer-social" aria-label="TikTok">
+
+                                    <i class="fa-brands fa-tiktok text-lg"></i>
+
+                                </a>
+
+                                <a href="https://github.com/sunilratoki3-hash" target="_blank" rel="noopener noreferrer"
+                                    class="footer-social" aria-label="GitHub">
+
+                                    <i class="fa-brands fa-github text-lg"></i>
+
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/sunil-ratoki-669823344/" target="_blank"
+                                    rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">
+
+                                    <i class="fa-brands fa-linkedin-in text-lg"></i>
+
+                                </a>
+
+                            </div>
+
+
+                            <!-- CONTACT BUTTONS -->
+                            <div class="flex flex-wrap gap-3 mt-7">
+
+                                <a href="https://wa.me/9705027656?text=Hello%20Sunil%2C%20I%20visited%20your%20portfolio."
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="inline-flex items-center gap-2 rounded-full bg-green-500 text-white px-5 py-3 text-sm font-bold hover:bg-green-400 transition">
+
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    WhatsApp
+
+                                </a>
+
+                                <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry"
+                                    class="inline-flex items-center gap-2 rounded-full bg-violet-500 text-white px-5 py-3 text-sm font-bold hover:bg-violet-400 transition">
+
+                                    <i class="fa-solid fa-envelope"></i>
+                                    Email
+
+                                </a>
+
+                                <a href="tel:+9779705027656"
+                                    class="inline-flex items-center gap-2 rounded-full bg-cyan-400 text-slate-950 px-5 py-3 text-sm font-bold hover:bg-cyan-300 transition">
+
+                                    <i class="fa-solid fa-phone"></i>
+                                    Call
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
                     </div>
-                </footer>
 
-            </body>
 
-            </html>
+                    <div class="section-line my-9"></div>
+
+
+                    <!-- COPYRIGHT -->
+                    <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-4 text-sm text-slate-500">
+
+                        <div class="hidden md:block"></div>
+
+                        <p class="text-center whitespace-nowrap">
+                            <i class="fa-regular fa-copyright mr-1"></i>
+                            2026 Sunil Ratoki. All rights reserved.
+                        </p>
+
+                        <a href="mailto:sunilratoki3@gmail.com"
+                            class="text-center md:text-right md:mr-10 hover:text-cyan-300 transition whitespace-nowrap">
+
+                            Get in touch
+                            <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </footer>
 

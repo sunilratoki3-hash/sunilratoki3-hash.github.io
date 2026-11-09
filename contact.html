@@ -6,12 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#070910">
 
+    <meta name="description"
+        content="Get in touch with Sunil Ratoki. Connect about web development, cybersecurity, technology and collaboration.">
+
     <title>Contact | Sunil Ratoki</title>
 
-    <link rel="preload" as="style" href="/build/assets/app-BULyC2qN.css" />
-    <link rel="modulepreload" as="script" href="/build/assets/app-DHKx2lXR.js" />
-    <link rel="stylesheet" href="/build/assets/app-BULyC2qN.css" />
+    <!-- PRODUCTION ASSETS -->
+    <link rel="preload" as="style" href="/build/assets/app-BULyC2qN.css">
+    <link rel="modulepreload" as="script" href="/build/assets/app-DHKx2lXR.js">
+    <link rel="stylesheet" href="/build/assets/app-BULyC2qN.css">
     <script type="module" src="/build/assets/app-DHKx2lXR.js"></script>
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+
     <style>
         * {
             box-sizing: border-box;
@@ -29,6 +37,8 @@
             overflow-x: hidden;
         }
 
+        /* THREE.JS BACKGROUND */
+
         #three-background {
             position: fixed;
             inset: 0;
@@ -42,10 +52,14 @@
             height: 100%;
         }
 
+        /* CONTENT */
+
         .content-layer {
             position: relative;
             z-index: 2;
         }
+
+        /* GLASS EFFECT */
 
         .glass {
             background: rgba(255, 255, 255, .045);
@@ -60,8 +74,10 @@
 
         .glass:hover {
             border-color: rgba(34, 211, 238, .4);
-            background: rgba(255, 255, 255, .07);
+            background: rgba(255, 255, 255, .075);
         }
+
+        /* GRADIENT TEXT */
 
         .gradient-text {
             background: linear-gradient(100deg, #fff, #22d3ee, #8b5cf6);
@@ -70,15 +86,20 @@
             color: transparent;
         }
 
+        /* NAVIGATION */
+
         .nav-link {
             color: #a1a1aa;
             transition: .3s ease;
+            white-space: nowrap;
         }
 
         .nav-link:hover,
         .nav-link.active {
             color: #22d3ee;
         }
+
+        /* SECTION DIVIDER */
 
         .section-line {
             height: 1px;
@@ -88,30 +109,7 @@
                     transparent);
         }
 
-        .form-field {
-            width: 100%;
-            background: rgba(255, 255, 255, .04);
-            border: 1px solid rgba(255, 255, 255, .12);
-            border-radius: 14px;
-            padding: 15px 17px;
-            color: white;
-            outline: none;
-            transition: .3s ease;
-        }
-
-        .form-field:focus {
-            border-color: rgba(34, 211, 238, .7);
-            box-shadow: 0 0 0 3px rgba(34, 211, 238, .08);
-        }
-
-        .form-field::placeholder {
-            color: #64748b;
-        }
-
-        .form-field option {
-            background: #070910;
-            color: white;
-        }
+        /* CONTACT CARDS */
 
         .contact-card {
             transition: .35s ease;
@@ -120,18 +118,252 @@
         .contact-card:hover {
             transform: translateY(-6px);
             border-color: rgba(34, 211, 238, .4);
+            background: rgba(255, 255, 255, .07);
         }
 
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
+        /* SOCIAL LINKS */
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 11px 17px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 999px;
+            color: #cbd5e1;
+            font-size: 13px;
+            font-weight: 500;
+            background: rgba(255, 255, 255, .025);
+            transition: .3s ease;
         }
 
-        @media (max-width: 767px) {
-            .desktop-nav {
-                display: none;
+        .social-link:hover {
+            color: #22d3ee;
+            border-color: rgba(34, 211, 238, .5);
+            background: rgba(34, 211, 238, .06);
+            transform: translateY(-3px);
+        }
+
+        /* CIRCULAR SOCIAL ICONS - FOOTER */
+
+        .footer-social {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 46px;
+            height: 46px;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, .12);
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .025);
+            color: #cbd5e1;
+            font-size: 18px;
+            transition: .3s ease;
+        }
+
+        .footer-social:hover {
+            transform: translateY(-3px);
+        }
+
+        .footer-social.instagram:hover {
+            color: #ec4899;
+            border-color: rgba(236, 72, 153, .5);
+            background: rgba(236, 72, 153, .1);
+        }
+
+        .footer-social.facebook:hover {
+            color: #60a5fa;
+            border-color: rgba(96, 165, 250, .5);
+            background: rgba(96, 165, 250, .1);
+        }
+
+        .footer-social.tiktok:hover {
+            color: #c084fc;
+            border-color: rgba(192, 132, 252, .5);
+            background: rgba(192, 132, 252, .1);
+        }
+
+        .footer-social.github:hover {
+            color: #22d3ee;
+            border-color: rgba(34, 211, 238, .5);
+            background: rgba(34, 211, 238, .1);
+        }
+
+        .footer-social.linkedin:hover {
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, .5);
+            background: rgba(56, 189, 248, .1);
+        }
+
+        /* PLAYFUL SOCIAL ICONS - RIGHT CARD */
+
+        .social-fun {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 54px;
+            height: 54px;
+            flex-shrink: 0;
+            border-radius: 18px;
+            border: 1px solid rgba(255, 255, 255, .12);
+            background: rgba(255, 255, 255, .045);
+            color: #cbd5e1;
+            font-size: 22px;
+            transition:
+                background .3s ease,
+                border-color .3s ease,
+                color .3s ease,
+                box-shadow .3s ease;
+        }
+
+        /* BOUNCE ANIMATION */
+
+        @keyframes social-bounce {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            25% {
+                transform: translateY(-12px) rotate(-10deg);
+            }
+
+            50% {
+                transform: translateY(2px) rotate(8deg);
+            }
+
+            75% {
+                transform: translateY(-6px) rotate(-5deg);
+            }
+
+            100% {
+                transform: translateY(-5px) rotate(0deg);
             }
         }
+
+        /* ICON WIGGLE */
+
+        @keyframes social-wiggle {
+
+            0%,
+            100% {
+                transform: rotate(0deg) scale(1);
+            }
+
+            25% {
+                transform: rotate(-18deg) scale(1.2);
+            }
+
+            50% {
+                transform: rotate(16deg) scale(1.15);
+            }
+
+            75% {
+                transform: rotate(-10deg) scale(1.1);
+            }
+        }
+
+        .social-fun:hover {
+            animation: social-bounce .65s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+        }
+
+        .social-fun i {
+            transition: .3s ease;
+        }
+
+        .social-fun:hover i {
+            animation: social-wiggle .65s ease;
+        }
+
+        /* FUNNY TOOLTIP */
+
+        .social-fun::after {
+            content: attr(data-tip);
+            position: absolute;
+            bottom: calc(100% + 12px);
+            left: 50%;
+            transform: translate(-50%, 8px) scale(.85);
+            opacity: 0;
+            visibility: hidden;
+            white-space: nowrap;
+            padding: 7px 12px;
+            border-radius: 10px;
+            background: #f8fafc;
+            color: #070910;
+            font-size: 11px;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, .25);
+            transition: .25s ease;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .social-fun:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, 0) scale(1);
+        }
+
+        /* PLATFORM COLORS */
+
+        .social-fun.instagram:hover {
+            color: #f472b6;
+            border-color: rgba(236, 72, 153, .6);
+            background: rgba(236, 72, 153, .12);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, .15);
+        }
+
+        .social-fun.facebook:hover {
+            color: #60a5fa;
+            border-color: rgba(96, 165, 250, .6);
+            background: rgba(96, 165, 250, .12);
+        }
+
+        .social-fun.tiktok:hover {
+            color: #c084fc;
+            border-color: rgba(192, 132, 252, .6);
+            background: rgba(192, 132, 252, .12);
+        }
+
+        .social-fun.github:hover {
+            color: #22d3ee;
+            border-color: rgba(34, 211, 238, .6);
+            background: rgba(34, 211, 238, .12);
+        }
+
+        .social-fun.linkedin:hover {
+            color: #38bdf8;
+            border-color: rgba(56, 189, 248, .6);
+            background: rgba(56, 189, 248, .12);
+        }
+
+        /* DIRECT CONTACT BUTTONS */
+
+        .contact-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 999px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: .3s ease;
+        }
+
+        .contact-button:hover {
+            transform: translateY(-3px);
+        }
+
+        /* REVEAL ANIMATION */
+
+        .reveal {
+            opacity: 1;
+            transform: none;
+        }
+
+        /* REDUCED MOTION */
 
         @media (prefers-reduced-motion: reduce) {
 
@@ -142,76 +374,130 @@
                 transition-duration: .01ms !important;
                 scroll-behavior: auto !important;
             }
+
+            .social-fun:hover,
+            .social-fun:hover i {
+                animation: none !important;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <!-- THREE.JS BACKGROUND -->
+
     <div id="three-background" aria-hidden="true"></div>
 
     <div class="content-layer">
 
-        <!-- NAVBAR -->
+        <!-- =================================
+             NAVBAR
+        ================================== -->
+
         <header class="fixed top-0 left-0 right-0 z-50 px-4 md:px-12 py-5">
+
             <nav class="glass max-w-7xl mx-auto rounded-2xl px-5 md:px-7 py-4 flex items-center justify-between">
+
+                <!-- LOGO -->
 
                 <a href="/" class="text-2xl font-black tracking-tight">
                     SR<span class="text-cyan-400">.</span>
                 </a>
 
+                <!-- NAVIGATION LINKS -->
+
                 <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-                    <a href="/" class="nav-link">Home</a>
-                    <a href="/about.html" class="nav-link">About</a>
-                    <a href="/skills.html" class="nav-link">Skills</a>
-                    <a href="/projects.html" class="nav-link">Projects</a>
-                    <a href="/contact.html" class="nav-link active">Contact</a>
+
+                    <a href="/" class="nav-link">
+                        <i class="fa-solid fa-house mr-2"></i>Home
+                    </a>
+
+                    <a href="/about.html" class="nav-link">
+                        <i class="fa-solid fa-user mr-2"></i>About
+                    </a>
+
+                    <a href="/skills.html" class="nav-link">
+                        <i class="fa-solid fa-code mr-2"></i>Skills
+                    </a>
+
+                    <a href="/projects.html" class="nav-link">
+                        <i class="fa-solid fa-folder-open mr-2"></i>Projects
+                    </a>
+
+                    <a href="/contact.html" class="nav-link active">
+                        <i class="fa-solid fa-envelope mr-2"></i>Contact
+                    </a>
+
                 </div>
 
-                <a href="/contact.html"
-                    class="rounded-full bg-cyan-400 text-slate-950 px-5 py-2.5 text-sm font-bold hover:bg-cyan-300 transition">
-                    Let's Talk ↗
+                <!-- CTA BUTTON -->
+
+                <a href="#contact-options"
+                    class="inline-flex items-center gap-2 rounded-full bg-cyan-400 text-slate-950 px-5 py-2.5 text-sm font-bold hover:bg-cyan-300 transition">
+
+                    <i class="fa-regular fa-paper-plane"></i>
+                    Let's Talk
+
                 </a>
 
             </nav>
+
         </header>
+
+
+        <!-- =================================
+             MAIN CONTENT
+        ================================== -->
 
         <main>
 
-            <!-- HERO -->
+            <!-- HERO SECTION -->
+
             <section class="min-h-[65vh] flex items-center px-6 md:px-16 pt-40 pb-16">
 
                 <div class="max-w-7xl mx-auto w-full">
 
-                    <p class="text-cyan-400 tracking-[.4em] text-xs font-bold mb-7">
+                    <p class="text-cyan-400 tracking-[.4em] text-xs font-bold mb-7 reveal">
                         05 / GET IN TOUCH
                     </p>
 
                     <h1
                         class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[.9] reveal">
+
                         LET'S<br>
+
                         <span class="gradient-text">CONNECT.</span>
+
                     </h1>
 
                     <p class="text-slate-400 text-lg md:text-xl leading-8 max-w-2xl mt-9 reveal">
+
                         Have a project idea, a question, or just want to connect?
-                        Feel free to reach out. I'd be glad to hear from you.
+
+                        Feel free to reach out.
+
+                        I'd be glad to hear from you.
+
                     </p>
 
                 </div>
 
             </section>
 
+
             <!-- CONTACT CONTENT -->
-            <section class="px-6 md:px-16 py-16">
+
+            <section class="px-6 md:px-16 py-20">
 
                 <div class="max-w-7xl mx-auto">
 
                     <div class="section-line mb-16"></div>
 
-                    <div class="grid lg:grid-cols-2 gap-10">
+                    <div class="grid lg:grid-cols-2 gap-10 items-start">
 
-                        <!-- LEFT SIDE -->
+                        <!-- LEFT COLUMN -->
+
                         <div class="reveal">
 
                             <p class="text-cyan-400 text-xs tracking-[.35em] font-bold mb-5">
@@ -219,45 +505,88 @@
                             </p>
 
                             <h2 class="text-4xl md:text-5xl font-bold leading-tight">
+
                                 Got something<br>
+
                                 <span class="gradient-text">in mind?</span>
+
                             </h2>
 
                             <p class="text-slate-400 leading-8 mt-7 max-w-lg">
+
                                 I'm currently learning and building projects in
                                 full-stack web development while exploring
-                                cybersecurity. I'm interested in connecting
-                                with people who enjoy technology and learning.
+                                cybersecurity.
+
+                                I'm interested in connecting with people who
+                                enjoy technology and learning.
+
                             </p>
+
+
+                            <!-- INFORMATION CARDS -->
 
                             <div class="grid sm:grid-cols-2 gap-5 mt-10">
 
-                                <div class="glass contact-card rounded-2xl p-6">
-                                    <div class="text-2xl text-cyan-300">✉</div>
-                                    <h3 class="font-bold mt-4">Email</h3>
-                                    <p class="text-slate-500 text-sm mt-2">
-                                        For general inquiries
-                                    </p>
-                                    <p class="text-cyan-300 text-sm mt-3">
-                                        <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry">
-                                    </p>
-                                </div>
+                                <!-- EMAIL CARD -->
 
                                 <div class="glass contact-card rounded-2xl p-6">
-                                    <div class="text-2xl text-violet-300">⌘</div>
-                                    <h3 class="font-bold mt-4">Projects</h3>
+
+                                    <div class="text-2xl text-cyan-300">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </div>
+
+                                    <h3 class="font-bold mt-4">
+                                        Email
+                                    </h3>
+
+                                    <p class="text-slate-500 text-sm mt-2">
+                                        For general inquiries and collaboration
+                                    </p>
+
+                                    <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry"
+                                        class="text-cyan-300 text-sm mt-3 inline-block hover:text-white transition break-all">
+
+                                        sunilratoki3@gmail.com ↗
+
+                                    </a>
+
+                                </div>
+
+
+                                <!-- PROJECTS CARD -->
+
+                                <div class="glass contact-card rounded-2xl p-6">
+
+                                    <div class="text-2xl text-violet-300">
+                                        <i class="fa-solid fa-folder-open"></i>
+                                    </div>
+
+                                    <h3 class="font-bold mt-4">
+                                        Projects
+                                    </h3>
+
                                     <p class="text-slate-500 text-sm mt-2">
                                         Web development and learning
                                     </p>
-                                    <a href="/projects.html" class="text-violet-300 text-sm mt-3 inline-block">
+
+                                    <a href="/projects.html"
+                                        class="text-violet-300 text-sm mt-3 inline-block hover:text-white transition">
+
                                         View my projects ↗
+
                                     </a>
+
                                 </div>
 
                             </div>
 
+
+                            <!-- CURRENT INTERESTS -->
+
                             <div class="glass rounded-2xl p-6 mt-5">
-                                <p class="text-slate-400 text-sm">
+
+                                <p class="text-slate-400 text-sm font-semibold">
                                     CURRENTLY INTERESTED IN
                                 </p>
 
@@ -279,45 +608,155 @@
                                     </span>
 
                                 </div>
+
                             </div>
 
                         </div>
 
-                        <!-- RIGHT SIDE FORM -->
-                        <div id="contact-form" class="glass rounded-3xl p-7 md:p-10 reveal">
 
-                            <!-- VALIDATION ERRORS -->
+                        <!-- RIGHT COLUMN -->
 
-                            <p class="text-cyan-400 text-xs tracking-[.35em] font-bold mb-4">
-                                SEND A MESSAGE
+                        <div id="contact-options" class="glass rounded-3xl p-8 md:p-10 reveal">
+
+                            <p class="text-cyan-400 text-xs tracking-[.35em] font-bold mb-5">
+                                FIND ME ONLINE
                             </p>
 
-                            <h2 class="text-3xl font-bold mb-8">
-                                Let's talk.
+                            <h2 class="text-3xl md:text-4xl font-bold">
+                                Connect With Me.
                             </h2>
-                            <div class="space-y-6">
 
-                                <p class="text-slate-400 leading-7">
-                                    Interested in working together or discussing technology?
-                                    Feel free to connect with me through email or WhatsApp.
-                                </p>
+                            <p class="text-slate-400 leading-7 mt-5">
 
-                                <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry"
-                                    class="w-full inline-flex justify-center rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
-                                    Email Me →
-                                </a>
+                                Feel free to connect with me on social platforms.
 
-                                <a href="https://wa.me/9705027656?text=Hello%20Sunil%2C%20I%20visited%20your%20portfolio."
-                                    target="_blank" rel="noopener noreferrer"
-                                    class="w-full inline-flex justify-center rounded-full bg-green-500 text-white px-8 py-4 font-bold hover:bg-green-400 transition">
-                                    WhatsApp Me →
-                                </a>
+                                I'm always interested in learning, sharing ideas
+                                and meeting people in technology.
 
-                                <p class="text-xs text-slate-500 text-center">
-                                    Let's connect and build something meaningful.
-                                </p>
+                            </p>
+
+
+                            <!-- PLAYFUL SOCIAL PLATFORMS -->
+
+                            <div class="mt-9">
+
+                                <h3 class="text-sm font-bold text-slate-300 mb-7">
+                                    SOCIAL PLATFORMS
+                                    <span class="text-cyan-400 ml-1">✦</span>
+                                </h3>
+
+                                <div class="flex flex-wrap items-center gap-5">
+
+                                    <!-- INSTAGRAM -->
+
+                                    <a href="https://www.instagram.com/sunilchhetrii3/" target="_blank"
+                                        rel="noopener noreferrer" aria-label="Instagram" title="Instagram"
+                                        data-tip="📸 Say cheese!" class="social-fun instagram">
+
+                                        <i class="fa-brands fa-instagram"></i>
+
+                                    </a>
+
+
+                                    <!-- FACEBOOK -->
+
+                                    <a href="https://www.facebook.com/profile.php?id=61578550240858" target="_blank"
+                                        rel="noopener noreferrer" aria-label="Facebook" title="Facebook"
+                                        data-tip="👋 Social butterfly!" class="social-fun facebook">
+
+                                        <i class="fa-brands fa-facebook-f"></i>
+
+                                    </a>
+
+
+                                    <!-- TIKTOK -->
+
+                                    <a href="https://www.tiktok.com/@sunil.chhetri122?lang=en" target="_blank"
+                                        rel="noopener noreferrer" aria-label="TikTok" title="TikTok"
+                                        data-tip="🕺 Show your moves!" class="social-fun tiktok">
+
+                                        <i class="fa-brands fa-tiktok"></i>
+
+                                    </a>
+
+
+                                    <!-- GITHUB -->
+
+                                    <a href="https://github.com/sunilratoki3-hash" target="_blank"
+                                        rel="noopener noreferrer" aria-label="GitHub" title="GitHub"
+                                        data-tip="💻 Bug hunter!" class="social-fun github">
+
+                                        <i class="fa-brands fa-github"></i>
+
+                                    </a>
+
+
+                                    <!-- LINKEDIN -->
+
+                                    <a href="https://www.linkedin.com/in/sunil-ratoki-669823344/" target="_blank"
+                                        rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"
+                                        data-tip="🤝 Future connections!" class="social-fun linkedin">
+
+                                        <i class="fa-brands fa-linkedin-in"></i>
+
+                                    </a>
+
+                                </div>
 
                             </div>
+
+
+                            <!-- DIVIDER -->
+
+                            <div class="section-line my-9"></div>
+
+
+                            <!-- DIRECT CONTACT OPTIONS -->
+
+                            <h3 class="text-sm font-bold text-slate-300 mb-5">
+                                LET'S TALK
+                            </h3>
+
+                            <div class="flex flex-col gap-4">
+
+                                <!-- WHATSAPP -->
+
+                                <a href="https://wa.me/9779705027656?text=Hello%20Sunil%2C%20I%20visited%20your%20portfolio."
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="contact-button bg-green-500 text-white hover:bg-green-400">
+
+                                    <i class="fa-brands fa-whatsapp mr-2"></i>
+                                    WhatsApp Me ↗
+
+                                </a>
+
+
+                                <!-- EMAIL -->
+
+                                <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry"
+                                    class="contact-button bg-violet-500 text-white hover:bg-violet-400">
+
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    Email Me ↗
+
+                                </a>
+
+
+                                <!-- PHONE -->
+
+                                <a href="tel:+9779705027656"
+                                    class="contact-button bg-cyan-400 text-slate-950 hover:bg-cyan-300">
+
+                                    <i class="fa-solid fa-phone mr-2"></i>
+                                    Call Me ↗
+
+                                </a>
+
+                            </div>
+
+                            <p class="text-xs text-slate-500 mt-6 text-center">
+                                Available for learning, collaboration and meaningful connections.
+                            </p>
 
                         </div>
 
@@ -327,22 +766,29 @@
 
             </section>
 
+
             <!-- CLOSING SECTION -->
+
             <section class="px-6 md:px-16 py-24">
 
                 <div class="max-w-5xl mx-auto">
 
                     <div class="section-line mb-16"></div>
 
-                    <div class="glass rounded-[4xl] p-9 md:p-14 text-center reveal">
+                    <div class="glass rounded-3xl p-9 md:p-14 text-center reveal">
 
                         <p class="text-cyan-400 text-xs tracking-[.35em] font-bold mb-6">
                             THANK YOU FOR VISITING
                         </p>
 
                         <h2 class="text-4xl md:text-6xl font-black leading-tight">
+
                             KEEP LEARNING.
-                            <span class="gradient-text">KEEP BUILDING.</span>
+
+                            <span class="gradient-text">
+                                KEEP BUILDING.
+                            </span>
+
                         </h2>
 
                         <p class="text-slate-400 mt-7 leading-8">
@@ -351,7 +797,9 @@
 
                         <a href="/"
                             class="inline-block mt-9 rounded-full border border-cyan-400/40 px-8 py-3 text-cyan-300 font-semibold hover:bg-cyan-400 hover:text-slate-950 transition">
+
                             Back to Home ↑
+
                         </a>
 
                     </div>
@@ -362,28 +810,154 @@
 
         </main>
 
-        <!-- FOOTER -->
-        <footer class="px-6 md:px-16 pb-8">
 
-            <div
-                class="max-w-7xl mx-auto border-t border-white/10 pt-7 flex flex-col md:flex-row justify-center gap-4 text-sm text-slate-500">
+        <!-- =================================
+             FOOTER
+        ================================== -->
 
-                <p>
-                    © 2026 Sunil Ratoki. All rights reserved.
-                </p>
+        <footer class="px-6 md:px-16 pt-16 pb-8">
+
+            <div class="max-w-7xl mx-auto">
+
+                <div class="glass rounded-3xl p-8 md:p-12">
+
+                    <div class="grid md:grid-cols-2 gap-10">
+
+                        <!-- BRAND -->
+
+                        <div>
+
+                            <a href="/" class="text-3xl font-black tracking-tight">
+                                SR<span class="text-cyan-400">.</span>
+                            </a>
+
+                            <p class="text-slate-400 leading-7 mt-5 max-w-md">
+
+                                Building ideas into meaningful digital experiences.
+                                Exploring full-stack development and cybersecurity.
+
+                            </p>
+
+                        </div>
+
+
+                        <!-- FOOTER SOCIAL ICONS -->
+
+                        <div>
+
+                            <h3 class="text-lg font-bold mb-5">
+                                Connect With Me
+                            </h3>
+
+                            <div class="flex flex-wrap gap-3">
+
+                                <a href="https://www.instagram.com/sunilchhetrii3/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Instagram" title="Instagram"
+                                    class="footer-social instagram">
+
+                                    <i class="fa-brands fa-instagram text-xl"></i>
+
+                                </a>
+
+                                <a href="https://www.facebook.com/profile.php?id=61578550240858" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Facebook" title="Facebook"
+                                    class="footer-social facebook">
+
+                                    <i class="fa-brands fa-facebook-f text-xl"></i>
+
+                                </a>
+
+                                <a href="https://www.tiktok.com/@sunil.chhetri122?lang=en" target="_blank"
+                                    rel="noopener noreferrer" aria-label="TikTok" title="TikTok"
+                                    class="footer-social tiktok">
+
+                                    <i class="fa-brands fa-tiktok text-xl"></i>
+
+                                </a>
+
+                                <a href="https://github.com/sunilratoki3-hash" target="_blank" rel="noopener noreferrer"
+                                    aria-label="GitHub" title="GitHub" class="footer-social github">
+
+                                    <i class="fa-brands fa-github text-xl"></i>
+
+                                </a>
+
+                                <a href="https://www.linkedin.com/in/sunil-ratoki-669823344/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"
+                                    class="footer-social linkedin">
+
+                                    <i class="fa-brands fa-linkedin-in text-xl"></i>
+
+                                </a>
+
+                            </div>
+
+
+                            <!-- FOOTER CONTACT BUTTONS -->
+
+                            <div class="flex flex-wrap gap-3 mt-6">
+
+                                <a href="https://wa.me/9779705027656?text=Hello%20Sunil%2C%20I%20visited%20your%20portfolio."
+                                    target="_blank" rel="noopener noreferrer"
+                                    class="rounded-full bg-green-500 text-white px-5 py-3 text-sm font-bold hover:bg-green-400 transition">
+
+                                    <i class="fa-brands fa-whatsapp mr-2"></i>
+                                    WhatsApp Me ↗
+
+                                </a>
+
+                                <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry"
+                                    class="rounded-full bg-violet-500 text-white px-5 py-3 text-sm font-bold hover:bg-violet-400 transition">
+
+                                    <i class="fa-solid fa-envelope mr-2"></i>
+                                    Mail Me ↗
+
+                                </a>
+
+                                <a href="tel:+9779705027656"
+                                    class="rounded-full bg-cyan-400 text-slate-950 px-5 py-3 text-sm font-bold hover:bg-cyan-300 transition">
+
+                                    <i class="fa-solid fa-phone mr-2"></i>
+                                    Call Me ↗
+
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DIVIDER -->
+
+                    <div class="section-line my-9"></div>
+
+
+                    <!-- COPYRIGHT -->
+
+                    <div class="relative flex flex-col md:flex-row justify-center gap-4 text-sm text-slate-500">
+
+                        <p>
+                            © 2026 Sunil Ratoki. All rights reserved.
+                        </p>
+
+                        <a href="mailto:sunilratoki3@gmail.com"
+                            class="text-cyan-400 hover:text-cyan-300 transition md:absolute md:right-10 md:mr-10">
+
+                            Get in touch ↗
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </footer>
 
     </div>
-
-    <!-- SWEETALERT -->
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    <!-- SUCCESS POPUP -->
-
-    <!-- RATE LIMIT WARNING POPUP -->
 
 </body>
 
