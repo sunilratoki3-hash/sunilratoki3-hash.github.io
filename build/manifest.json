@@ -1,6 +1,6 @@
 {
   "resources/css/app.css": {
-    "file": "assets/app-BULyC2qN.css",
+    "file": "assets/app-ZI1jLbDz.css",
     "src": "resources/css/app.css",
     "isEntry": true,
     "name": "app",
@@ -9,7 +9,7 @@
     ]
   },
   "resources/js/app.js": {
-    "file": "assets/app-DHKx2lXR.js",
+    "file": "assets/app-Dj3hrDaq.js",
     "name": "app",
     "src": "resources/js/app.js",
     "isEntry": true,
@@ -18,7 +18,7 @@
     ]
   },
   "resources/js/portfolio-effects.js": {
-    "file": "assets/portfolio-effects-CGLbRdfs.js",
+    "file": "assets/portfolio-effects-C09b3NOW.js",
     "name": "portfolio-effects",
     "src": "resources/js/portfolio-effects.js",
     "isDynamicEntry": true

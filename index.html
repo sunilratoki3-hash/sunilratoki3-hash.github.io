@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,16 +9,14 @@
     <title>Sunil Ratoki | Full-Stack Developer</title>
 
     <meta name="description"
-        content="Sunil Ratoki — B.Sc. CSIT student and Full-Stack Developer exploring Laravel, JavaScript, modern web development, and cybersecurity.">
+        content="Sunil Ratoki â€” B.Sc. CSIT student and Full-Stack Developer exploring Laravel, JavaScript, modern web development, and cybersecurity.">
 
-    <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
-    <!-- PRODUCTION ASSETS -->
-    <link rel="preload" as="style" href="/build/assets/app-BULyC2qN.css">
-    <link rel="modulepreload" as="script" href="/build/assets/app-DHKx2lXR.js">
-    <link rel="stylesheet" href="/build/assets/app-BULyC2qN.css">
-    <script type="module" src="/build/assets/app-DHKx2lXR.js"></script>
+    <link rel="preload" as="style" href="/build/assets/app-ZI1jLbDz.css">
+    <link rel="modulepreload" as="script" href="/build/assets/app-Dj3hrDaq.js">
+    <link rel="stylesheet" href="/build/assets/app-ZI1jLbDz.css">
+    <script type="module" src="/build/assets/app-Dj3hrDaq.js"></script>
 
     <style>
         * {
@@ -27,6 +25,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 120px;
         }
 
         body {
@@ -37,11 +36,23 @@
             overflow-x: hidden;
         }
 
+        img,
+        video,
+        canvas,
+        svg {
+            max-width: 100%;
+        }
+
+        a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
         #three-background {
             position: fixed;
             inset: 0;
             z-index: 0;
             pointer-events: none;
+            overflow: hidden;
         }
 
         #three-background canvas {
@@ -53,6 +64,8 @@
         .content-layer {
             position: relative;
             z-index: 2;
+            width: 100%;
+            overflow: clip;
         }
 
         .glass {
@@ -119,32 +132,13 @@
             transform: translateY(-3px);
         }
 
-        .social-link {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 9px;
-            padding: 11px 16px;
-            border: 1px solid rgba(255, 255, 255, .12);
-            border-radius: 999px;
-            color: #cbd5e1;
-            font-size: 13px;
-            transition: .3s ease;
-        }
-
-        .social-link:hover {
-            color: #22d3ee;
-            border-color: rgba(34, 211, 238, .5);
-            background: rgba(34, 211, 238, .06);
-            transform: translateY(-3px);
-        }
-
         .footer-social {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 42px;
-            height: 42px;
+            width: 44px;
+            height: 44px;
+            flex-shrink: 0;
             border-radius: 50%;
             border: 1px solid rgba(255, 255, 255, .12);
             color: #94a3b8;
@@ -164,11 +158,355 @@
             transform: translateY(30px);
         }
 
-        @media (max-width: 767px) {
-            .desktop-nav {
-                display: none;
+        /* HEADER */
+
+        .site-header {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100%;
+            z-index: 9999 !important;
+            padding: 20px 16px;
+        }
+
+        .site-header>nav:first-child {
+            width: 100%;
+        }
+
+        .mobile-nav {
+            display: none;
+        }
+
+        .mobile-nav-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            min-width: 0;
+            min-height: 48px;
+            padding: 7px 2px;
+            border-radius: 10px;
+            color: #94a3b8;
+            font-size: 10px;
+            font-weight: 600;
+            line-height: 1.2;
+            white-space: nowrap;
+            transition: .3s ease;
+        }
+
+        .mobile-nav-link i {
+            font-size: 15px;
+        }
+
+        .mobile-nav-link:hover,
+        .mobile-nav-link.active {
+            color: #22d3ee;
+            background: rgba(34, 211, 238, .07);
+        }
+
+        /* TABLET AND MOBILE */
+
+        @media (max-width: 1023px) {
+            .hero-heading {
+                font-size: clamp(3.3rem, 9vw, 6.5rem);
+                line-height: .98;
+                letter-spacing: -.065em;
             }
         }
+
+        @media (max-width: 767px) {
+
+            html {
+                scroll-padding-top: 120px;
+            }
+
+            .site-header {
+                padding: 10px 12px !important;
+            }
+
+            .site-header>nav:first-child {
+                min-height: 56px;
+                padding: 10px 14px !important;
+                gap: 8px;
+                border-radius: 15px;
+            }
+
+            .site-header>nav:first-child>a:first-child {
+                font-size: 22px;
+                flex-shrink: 0;
+            }
+
+            .desktop-nav {
+                display: none !important;
+            }
+
+            .site-header>nav:first-child>a:last-child {
+                padding: 9px 12px !important;
+                font-size: 11px !important;
+                white-space: nowrap;
+                flex-shrink: 0;
+            }
+
+            .site-header>nav:first-child>a:last-child i {
+                margin-right: 4px;
+            }
+
+            .mobile-nav {
+                display: grid !important;
+                grid-template-columns: repeat(5, minmax(0, 1fr));
+                width: 100%;
+                margin: 7px auto 0;
+                padding: 5px 3px !important;
+                gap: 2px;
+                border-radius: 14px;
+            }
+
+            .mobile-nav-link {
+                font-size: 10px;
+                min-height: 46px;
+                gap: 4px;
+            }
+
+            .mobile-nav-link i {
+                font-size: 14px;
+            }
+
+            main section {
+                scroll-margin-top: 130px;
+            }
+
+            .hero-heading {
+                font-size: clamp(2.4rem, 10.5vw, 4.5rem);
+                line-height: .98;
+                letter-spacing: -.065em;
+                overflow-wrap: anywhere;
+            }
+
+            .hero-copy {
+                font-size: 14px;
+                line-height: 1.9;
+            }
+
+            .hero-actions {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .hero-actions a {
+                justify-content: center;
+                width: 100%;
+                padding: 14px 16px !important;
+                font-size: 13px;
+            }
+
+            .hero-details {
+                gap: 13px 20px;
+                font-size: 12px;
+            }
+
+            .section-padding {
+                padding-top: 65px !important;
+                padding-bottom: 65px !important;
+            }
+
+            .section-heading {
+                font-size: clamp(1.8rem, 7vw, 2.7rem);
+                line-height: 1.2;
+            }
+
+            .section-description {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .tech-list {
+                gap: 9px !important;
+            }
+
+            .tech-pill {
+                padding: 10px 14px !important;
+                gap: 7px;
+                font-size: 12px !important;
+            }
+
+            .project-card {
+                padding: 28px 20px !important;
+                border-radius: 22px !important;
+            }
+
+            .project-card h3 {
+                font-size: clamp(1.8rem, 7vw, 2.6rem);
+                line-height: 1.2;
+            }
+
+            .project-card p {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .project-card>a,
+            .cta-card a {
+                justify-content: center;
+                width: 100%;
+                padding: 14px 16px !important;
+                font-size: 13px;
+            }
+
+            .about-heading {
+                font-size: clamp(2.1rem, 8vw, 3.3rem);
+                line-height: 1.15;
+            }
+
+            .about-card {
+                padding: 25px 21px !important;
+            }
+
+            .cta-card {
+                padding: 30px 20px !important;
+                border-radius: 22px !important;
+            }
+
+            .cta-heading {
+                font-size: clamp(2rem, 8vw, 3rem);
+                line-height: 1.15;
+            }
+
+            .cta-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cta-actions a {
+                width: 100%;
+            }
+
+            footer {
+                padding-left: 14px !important;
+                padding-right: 14px !important;
+                padding-bottom: 16px !important;
+            }
+
+            .footer-card {
+                padding: 25px 20px !important;
+                border-radius: 22px !important;
+            }
+
+            .footer-card .footer-description {
+                font-size: 13px;
+                line-height: 1.8;
+            }
+
+            .footer-contact {
+                display: grid !important;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 9px !important;
+            }
+
+            .footer-contact a {
+                justify-content: center;
+                padding: 11px 9px !important;
+                font-size: 12px !important;
+            }
+
+            .footer-bottom {
+                display: flex !important;
+                flex-direction: column;
+                gap: 12px !important;
+                text-align: center;
+            }
+
+            .footer-bottom p,
+            .footer-bottom a {
+                white-space: normal !important;
+                font-size: 12px;
+            }
+        }
+
+        /* SMALL MOBILE */
+
+        @media (max-width: 380px) {
+
+            .site-header {
+                padding-left: 8px !important;
+                padding-right: 8px !important;
+            }
+
+            .site-header>nav:first-child {
+                padding: 9px 10px !important;
+            }
+
+            .site-header>nav:first-child>a:last-child {
+                font-size: 10px !important;
+                padding: 8px 9px !important;
+            }
+
+            .mobile-nav-link {
+                font-size: 9px;
+                gap: 3px;
+            }
+
+            .mobile-nav-link i {
+                font-size: 13px;
+            }
+
+            .hero-heading {
+                font-size: clamp(2.15rem, 10vw, 2.6rem);
+            }
+
+            .footer-contact {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-pill {
+                padding: 9px 11px !important;
+                font-size: 11px !important;
+            }
+        }
+
+        /* TABLET */
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+
+            .site-header {
+                padding: 14px 22px;
+            }
+
+            .site-header>nav:first-child {
+                padding: 14px 18px !important;
+            }
+
+            .desktop-nav {
+                gap: 16px !important;
+                font-size: 12px !important;
+            }
+
+            .mobile-nav {
+                display: none !important;
+            }
+
+            .hero-heading {
+                font-size: clamp(4rem, 8vw, 6rem);
+            }
+
+            .section-padding {
+                padding-top: 80px !important;
+                padding-bottom: 80px !important;
+            }
+
+            .project-card {
+                padding: 45px 35px !important;
+            }
+
+            .footer-card {
+                padding: 32px !important;
+            }
+        }
+
+        /* REDUCED MOTION */
 
         @media (prefers-reduced-motion: reduce) {
 
@@ -185,13 +523,12 @@
 
 <body>
 
-    <!-- THREE.JS BACKGROUND -->
     <div id="three-background" aria-hidden="true"></div>
 
     <div class="content-layer">
 
         <!-- NAVBAR -->
-        <header class="fixed top-0 left-0 right-0 z-50 px-4 md:px-12 py-5">
+        <header class="site-header">
 
             <nav class="glass max-w-7xl mx-auto rounded-2xl px-5 md:px-7 py-4 flex items-center justify-between">
 
@@ -237,6 +574,37 @@
                 </a>
 
             </nav>
+
+            <!-- MOBILE NAVIGATION -->
+            <nav class="mobile-nav glass max-w-7xl mx-auto mt-2 rounded-xl px-1 py-2" aria-label="Mobile navigation">
+
+                <a href="/" class="mobile-nav-link active" aria-current="page">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Home</span>
+                </a>
+
+                <a href="/about.html" class="mobile-nav-link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>About</span>
+                </a>
+
+                <a href="/skills.html" class="mobile-nav-link">
+                    <i class="fa-solid fa-code"></i>
+                    <span>Skills</span>
+                </a>
+
+                <a href="/projects.html" class="mobile-nav-link">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Projects</span>
+                </a>
+
+                <a href="/contact.html" class="mobile-nav-link">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Contact</span>
+                </a>
+
+            </nav>
+
         </header>
 
 
@@ -262,7 +630,7 @@
 
                                 <span class="text-xs sm:text-sm text-slate-300">
                                     <i class="fa-solid fa-graduation-cap text-cyan-400 mr-1"></i>
-                                    BSc CSIT Student · Full-Stack Developer
+                                    BSc CSIT Student Â· Full-Stack Developer
                                 </span>
 
                             </div>
@@ -273,7 +641,7 @@
                             </p>
 
                             <h1
-                                class="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[.88] reveal">
+                                class="hero-heading text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[.88] reveal">
                                 FULL-STACK<br>
                                 <span class="gradient-text">DEVELOPER.</span>
                             </h1>
@@ -282,7 +650,7 @@
                                 Building ideas into meaningful digital experiences.
                             </h2>
 
-                            <p class="text-slate-400 text-base md:text-lg leading-8 max-w-2xl mt-5 reveal">
+                            <p class="hero-copy text-slate-400 text-base md:text-lg leading-8 max-w-2xl mt-5 reveal">
                                 I'm a Full-Stack Developer focused on creating modern,
                                 responsive, and user-friendly web applications. I work
                                 with Laravel, PHP, JavaScript, Tailwind CSS, and SQL
@@ -292,7 +660,7 @@
                             </p>
 
                             <!-- HERO BUTTONS -->
-                            <div class="flex flex-wrap gap-4 mt-9 reveal">
+                            <div class="hero-actions flex flex-wrap gap-4 mt-9 reveal">
 
                                 <a href="/contact.html"
                                     class="inline-flex items-center gap-3 rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
@@ -315,7 +683,8 @@
                             </div>
 
                             <!-- QUICK DETAILS -->
-                            <div class="flex flex-wrap gap-x-8 gap-y-4 mt-12 text-sm text-slate-400 reveal">
+                            <div
+                                class="hero-details flex flex-wrap gap-x-8 gap-y-4 mt-12 text-sm text-slate-400 reveal">
 
                                 <div class="flex items-center gap-2">
                                     <i class="fa-solid fa-code text-cyan-400"></i>
@@ -428,7 +797,7 @@
 
 
             <!-- TECHNOLOGY STACK -->
-            <section class="px-6 md:px-16 py-16">
+            <section class="section-padding px-6 md:px-16 py-16">
 
                 <div class="max-w-7xl mx-auto">
 
@@ -441,62 +810,53 @@
                             TECHNOLOGIES I WORK WITH
                         </p>
 
-                        <h2 class="text-3xl md:text-5xl font-bold">
+                        <h2 class="section-heading text-3xl md:text-5xl font-bold">
                             My development <span class="gradient-text">toolkit.</span>
                         </h2>
 
-                        <p class="text-slate-400 max-w-2xl mx-auto mt-5 leading-7">
+                        <p class="section-description text-slate-400 max-w-2xl mx-auto mt-5 leading-7">
                             Technologies I'm learning and using to build practical
                             web development projects.
                         </p>
 
                     </div>
 
-                    <div class="flex flex-wrap justify-center gap-3 mt-12 reveal">
+                    <div class="tech-list flex flex-wrap justify-center gap-3 mt-12 reveal">
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-solid fa-code text-red-400"></i>
-                            Laravel
+                            <i class="fa-solid fa-code text-red-400"></i> Laravel
                         </span>
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-brands fa-php text-indigo-300"></i>
-                            PHP
+                            <i class="fa-brands fa-php text-indigo-300"></i> PHP
                         </span>
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-brands fa-js text-yellow-400"></i>
-                            JavaScript
+                            <i class="fa-brands fa-js text-yellow-400"></i> JavaScript
                         </span>
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-solid fa-wind text-cyan-300"></i>
-                            Tailwind CSS
+                            <i class="fa-solid fa-wind text-cyan-300"></i> Tailwind CSS
                         </span>
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-solid fa-database text-blue-400"></i>
-                            SQL
+                            <i class="fa-solid fa-database text-blue-400"></i> SQL
                         </span>
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-brands fa-html5 text-orange-400"></i>
-                            HTML
+                            <i class="fa-brands fa-html5 text-orange-400"></i> HTML
                         </span>
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-brands fa-css3-alt text-blue-400"></i>
-                            CSS
+                            <i class="fa-brands fa-css3-alt text-blue-400"></i> CSS
                         </span>
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-brands fa-git-alt text-orange-400"></i>
-                            Git
+                            <i class="fa-brands fa-git-alt text-orange-400"></i> Git
                         </span>
 
                         <span class="tech-pill glass rounded-full px-6 py-3 text-sm text-slate-200">
-                            <i class="fa-brands fa-github text-white"></i>
-                            GitHub
+                            <i class="fa-brands fa-github text-white"></i> GitHub
                         </span>
 
                     </div>
@@ -507,7 +867,7 @@
 
 
             <!-- FEATURED PROJECTS -->
-            <section class="px-6 md:px-16 py-24">
+            <section class="section-padding px-6 md:px-16 py-24">
 
                 <div class="max-w-7xl mx-auto">
 
@@ -522,11 +882,12 @@
                                 FEATURED PROJECTS
                             </p>
 
-                            <h2 class="text-3xl md:text-5xl font-bold leading-tight">
+                            <h2 class="section-heading text-3xl md:text-5xl font-bold leading-tight">
                                 Projects that <span class="gradient-text">showcase my skills.</span>
                             </h2>
 
                         </div>
+
                     </div>
 
                     <div class="mt-14">
@@ -572,7 +933,7 @@
 
 
             <!-- ABOUT PREVIEW -->
-            <section class="px-6 md:px-16 py-24">
+            <section class="section-padding px-6 md:px-16 py-24">
 
                 <div class="max-w-7xl mx-auto">
 
@@ -587,7 +948,7 @@
                                 A LITTLE ABOUT ME
                             </p>
 
-                            <h2 class="text-4xl md:text-6xl font-bold leading-tight">
+                            <h2 class="about-heading text-4xl md:text-6xl font-bold leading-tight">
                                 Curious by nature.<br>
                                 <span class="gradient-text">Driven to build.</span>
                             </h2>
@@ -608,7 +969,7 @@
 
                         </div>
 
-                        <div class="glass rounded-3xl p-8 md:p-10 reveal">
+                        <div class="about-card glass rounded-3xl p-8 md:p-10 reveal">
 
                             <div class="text-3xl text-cyan-300 mb-6">
                                 <i class="fa-solid fa-graduation-cap"></i>
@@ -645,13 +1006,13 @@
 
 
             <!-- FINAL CTA -->
-            <section class="px-6 md:px-16 py-24">
+            <section class="section-padding px-6 md:px-16 py-24">
 
                 <div class="max-w-5xl mx-auto">
 
                     <div class="section-line mb-16"></div>
 
-                    <div class="glass rounded-[2rem] p-9 md:p-16 text-center reveal">
+                    <div class="cta-card glass rounded-[2rem] p-9 md:p-16 text-center reveal">
 
                         <div
                             class="w-16 h-16 rounded-2xl bg-violet-400/10 border border-violet-400/20 flex items-center justify-center mx-auto mb-8">
@@ -662,7 +1023,7 @@
                             HAVE AN IDEA?
                         </p>
 
-                        <h2 class="text-4xl md:text-6xl font-black leading-tight">
+                        <h2 class="cta-heading text-4xl md:text-6xl font-black leading-tight">
                             LET'S BUILD<br>
                             <span class="gradient-text">SOMETHING GREAT.</span>
                         </h2>
@@ -672,7 +1033,7 @@
                             want to connect? I'd love to hear from you.
                         </p>
 
-                        <div class="flex flex-wrap justify-center gap-4 mt-9">
+                        <div class="cta-actions flex flex-wrap justify-center gap-4 mt-9">
 
                             <a href="/contact.html"
                                 class="inline-flex items-center gap-3 rounded-full bg-cyan-400 text-slate-950 px-8 py-4 font-bold hover:bg-cyan-300 transition">
@@ -709,7 +1070,7 @@
 
                 <div class="section-line mb-10"></div>
 
-                <div class="glass rounded-3xl p-8 md:p-10">
+                <div class="footer-card glass rounded-3xl p-8 md:p-10">
 
                     <div class="grid md:grid-cols-2 gap-10">
 
@@ -720,7 +1081,7 @@
                                 SR<span class="text-cyan-400">.</span>
                             </a>
 
-                            <p class="text-slate-400 leading-7 mt-5 max-w-md">
+                            <p class="footer-description text-slate-400 leading-7 mt-5 max-w-md">
                                 Building ideas into meaningful digital experiences.
                                 Exploring full-stack development and cybersecurity.
                             </p>
@@ -753,44 +1114,34 @@
 
                                 <a href="https://www.instagram.com/sunilchhetrii3/" target="_blank"
                                     rel="noopener noreferrer" class="footer-social" aria-label="Instagram">
-
                                     <i class="fa-brands fa-instagram text-lg"></i>
-
                                 </a>
 
                                 <a href="https://www.facebook.com/profile.php?id=61578550240858" target="_blank"
                                     rel="noopener noreferrer" class="footer-social" aria-label="Facebook">
-
                                     <i class="fa-brands fa-facebook-f text-lg"></i>
-
                                 </a>
 
                                 <a href="https://www.tiktok.com/@sunil.chhetri122?lang=en" target="_blank"
                                     rel="noopener noreferrer" class="footer-social" aria-label="TikTok">
-
                                     <i class="fa-brands fa-tiktok text-lg"></i>
-
                                 </a>
 
                                 <a href="https://github.com/sunilratoki3-hash" target="_blank" rel="noopener noreferrer"
                                     class="footer-social" aria-label="GitHub">
-
                                     <i class="fa-brands fa-github text-lg"></i>
-
                                 </a>
 
                                 <a href="https://www.linkedin.com/in/sunil-ratoki-669823344/" target="_blank"
                                     rel="noopener noreferrer" class="footer-social" aria-label="LinkedIn">
-
                                     <i class="fa-brands fa-linkedin-in text-lg"></i>
-
                                 </a>
 
                             </div>
 
 
                             <!-- CONTACT BUTTONS -->
-                            <div class="flex flex-wrap gap-3 mt-7">
+                            <div class="footer-contact flex flex-wrap gap-3 mt-7">
 
                                 <a href="https://wa.me/9705027656?text=Hello%20Sunil%2C%20I%20visited%20your%20portfolio."
                                     target="_blank" rel="noopener noreferrer"
@@ -828,7 +1179,8 @@
 
 
                     <!-- COPYRIGHT -->
-                    <div class="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-4 text-sm text-slate-500">
+                    <div
+                        class="footer-bottom grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center gap-4 text-sm text-slate-500">
 
                         <div class="hidden md:block"></div>
 
@@ -858,3 +1210,4 @@
 </body>
 
 </html>
+
