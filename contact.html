@@ -27,6 +27,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 150px;
         }
 
         body {
@@ -97,6 +98,17 @@
         .nav-link:hover,
         .nav-link.active {
             color: #22d3ee;
+        }
+
+        /* STICKY NAVBAR FIX */
+
+        .site-header {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 9999 !important;
         }
 
         /* SECTION DIVIDER */
@@ -411,6 +423,8 @@
             .site-header {
                 padding-top: 12px !important;
                 padding-bottom: 12px !important;
+                padding-left: 12px !important;
+                padding-right: 12px !important;
             }
 
             .contact-heading {
@@ -512,35 +526,6 @@
             .social-fun:hover,
             .social-fun:hover i {
                 animation: none !important;
-            }
-        }
-
-        /* Mobile Navbar Fix */
-        @media (max-width: 767px) {
-            header {
-                position: fixed !important;
-                top: 0 !important;
-                left: 0 !important;
-                right: 0 !important;
-                width: 100% !important;
-                z-index: 9999 !important;
-                padding: 10px 12px !important;
-            }
-
-            header nav {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-                width: 100% !important;
-                min-height: 60px !important;
-                padding: 12px 14px !important;
-                gap: 10px !important;
-            }
-
-            header nav>a:last-child {
-                white-space: nowrap !important;
-                font-size: 12px !important;
-                padding: 9px 13px !important;
             }
         }
     </style>
@@ -742,7 +727,8 @@
                                     <a href="mailto:sunilratoki3@gmail.com?subject=Portfolio%20Inquiry"
                                         class="text-cyan-300 text-sm mt-3 inline-block hover:text-white transition break-all">
 
-                                        sunilratoki3@gmail.com â†—
+                                        sunilratoki3@gmail.com
+                                        <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
 
                                     </a>
 
@@ -768,7 +754,8 @@
                                     <a href="/projects.html"
                                         class="text-violet-300 text-sm mt-3 inline-block hover:text-white transition">
 
-                                        View my projects â†—
+                                        View my projects
+                                        <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
 
                                     </a>
 
@@ -818,6 +805,7 @@
                             </p>
 
                             <h2 class="text-3xl md:text-4xl font-bold">
+
                                 Connect With Me.
                             </h2>
 
@@ -835,9 +823,10 @@
 
                             <div class="mt-9">
 
-                                <h3 class="text-sm font-bold text-slate-300 mb-7">
+                                <h3 class="text-sm font-bold text-slate-300 mb-7 flex items-center gap-2">
+                                    <i class="fa-solid fa-share-nodes text-cyan-400"></i>
                                     SOCIAL PLATFORMS
-                                    <span class="text-cyan-400 ml-1">âœ¦</span>
+                                    <i class="fa-solid fa-star text-cyan-400 text-xs"></i>
                                 </h3>
 
                                 <div class="flex flex-wrap items-center gap-5">
@@ -846,7 +835,7 @@
 
                                     <a href="https://www.instagram.com/sunilchhetrii3/" target="_blank"
                                         rel="noopener noreferrer" aria-label="Instagram" title="Instagram"
-                                        data-tip="ðŸ“¸ Say cheese!" class="social-fun instagram">
+                                        data-tip="Instagram - Say cheese!" class="social-fun instagram">
 
                                         <i class="fa-brands fa-instagram"></i>
 
@@ -857,7 +846,7 @@
 
                                     <a href="https://www.facebook.com/profile.php?id=61578550240858" target="_blank"
                                         rel="noopener noreferrer" aria-label="Facebook" title="Facebook"
-                                        data-tip="ðŸ‘‹ Social butterfly!" class="social-fun facebook">
+                                        data-tip="Facebook - Social connections!" class="social-fun facebook">
 
                                         <i class="fa-brands fa-facebook-f"></i>
 
@@ -868,7 +857,7 @@
 
                                     <a href="https://www.tiktok.com/@sunil.chhetri122?lang=en" target="_blank"
                                         rel="noopener noreferrer" aria-label="TikTok" title="TikTok"
-                                        data-tip="ðŸ•º Show your moves!" class="social-fun tiktok">
+                                        data-tip="TikTok - Short videos!" class="social-fun tiktok">
 
                                         <i class="fa-brands fa-tiktok"></i>
 
@@ -879,7 +868,7 @@
 
                                     <a href="https://github.com/sunilratoki3-hash" target="_blank"
                                         rel="noopener noreferrer" aria-label="GitHub" title="GitHub"
-                                        data-tip="ðŸ’» Bug hunter!" class="social-fun github">
+                                        data-tip="GitHub - Explore my code!" class="social-fun github">
 
                                         <i class="fa-brands fa-github"></i>
 
@@ -890,7 +879,7 @@
 
                                     <a href="https://www.linkedin.com/in/sunil-ratoki-669823344/" target="_blank"
                                         rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"
-                                        data-tip="ðŸ¤ Future connections!" class="social-fun linkedin">
+                                        data-tip="LinkedIn - Professional connections!" class="social-fun linkedin">
 
                                         <i class="fa-brands fa-linkedin-in"></i>
 
@@ -908,7 +897,8 @@
 
                             <!-- DIRECT CONTACT OPTIONS -->
 
-                            <h3 class="text-sm font-bold text-slate-300 mb-5">
+                            <h3 class="text-sm font-bold text-slate-300 mb-5 flex items-center gap-2">
+                                <i class="fa-solid fa-comments text-cyan-400"></i>
                                 LET'S TALK
                             </h3>
 
@@ -920,8 +910,9 @@
                                     target="_blank" rel="noopener noreferrer"
                                     class="contact-button bg-green-500 text-white hover:bg-green-400">
 
-                                    <i class="fa-brands fa-whatsapp mr-2"></i>
-                                    WhatsApp Me â†—
+                                    <i class="fa-brands fa-whatsapp mr-2 text-lg"></i>
+                                    WhatsApp Me
+                                    <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
 
                                 </a>
 
@@ -932,7 +923,8 @@
                                     class="contact-button bg-violet-500 text-white hover:bg-violet-400">
 
                                     <i class="fa-solid fa-envelope mr-2"></i>
-                                    Email Me â†—
+                                    Email Me
+                                    <i class="fa-solid fa-arrow-up-right-from-square ml-2 text-xs"></i>
 
                                 </a>
 
@@ -943,7 +935,8 @@
                                     class="contact-button bg-cyan-400 text-slate-950 hover:bg-cyan-300">
 
                                     <i class="fa-solid fa-phone mr-2"></i>
-                                    Call Me â†—
+                                    Call Me
+                                    <i class="fa-solid fa-phone-volume ml-2 text-xs"></i>
 
                                 </a>
 
@@ -991,9 +984,11 @@
                         </p>
 
                         <a href="/"
-                            class="inline-block mt-9 rounded-full border border-cyan-400/40 px-8 py-3 text-cyan-300 font-semibold hover:bg-cyan-400 hover:text-slate-950 transition">
+                            class="inline-flex items-center gap-2 mt-9 rounded-full border border-cyan-400/40 px-8 py-3 text-cyan-300 font-semibold hover:bg-cyan-400 hover:text-slate-950 transition">
 
-                            Back to Home â†‘
+                            <i class="fa-solid fa-house"></i>
+                            Back to Home
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
 
                         </a>
 
@@ -1040,7 +1035,9 @@
 
                         <div>
 
-                            <h3 class="text-lg font-bold mb-5">
+                            <h3 class="text-lg font-bold mb-5 flex items-center gap-2">
+                                <i class="fa-solid fa-share-nodes text-cyan-400"></i>
+
                                 Connect With Me
                             </h3>
 
@@ -1097,7 +1094,8 @@
                                     class="rounded-full bg-green-500 text-white px-5 py-3 text-sm font-bold hover:bg-green-400 transition">
 
                                     <i class="fa-brands fa-whatsapp mr-2"></i>
-                                    WhatsApp Me â†—
+                                    WhatsApp Me
+                                    <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
 
                                 </a>
 
@@ -1105,7 +1103,8 @@
                                     class="rounded-full bg-violet-500 text-white px-5 py-3 text-sm font-bold hover:bg-violet-400 transition">
 
                                     <i class="fa-solid fa-envelope mr-2"></i>
-                                    Mail Me â†—
+                                    Mail Me
+                                    <i class="fa-solid fa-arrow-up-right-from-square ml-1 text-xs"></i>
 
                                 </a>
 
@@ -1113,7 +1112,8 @@
                                     class="rounded-full bg-cyan-400 text-slate-950 px-5 py-3 text-sm font-bold hover:bg-cyan-300 transition">
 
                                     <i class="fa-solid fa-phone mr-2"></i>
-                                    Call Me â†—
+                                    Call Me
+                                    <i class="fa-solid fa-phone-volume ml-1 text-xs"></i>
 
                                 </a>
 
@@ -1134,7 +1134,7 @@
                     <div class="relative flex flex-col md:flex-row justify-center gap-4 text-sm text-slate-500">
 
                         <p>
-                            Â© 2026 Sunil Ratoki. All rights reserved.
+                            &copy; 2026 Sunil Ratoki. All rights reserved.
                         </p>
 
                         <a href="mailto:sunilratoki3@gmail.com"
@@ -1157,4 +1157,3 @@
 </body>
 
 </html>
-

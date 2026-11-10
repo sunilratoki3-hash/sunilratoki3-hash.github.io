@@ -26,6 +26,7 @@
 
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 150px;
         }
 
         body {
@@ -52,6 +53,16 @@
         .content-layer {
             position: relative;
             z-index: 2;
+        }
+
+        /* STICKY NAVBAR FIX */
+        .site-header {
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            right: 0 !important;
+            width: 100% !important;
+            z-index: 9999 !important;
         }
 
         .glass {
@@ -199,6 +210,8 @@
             .site-header {
                 padding-top: 12px !important;
                 padding-bottom: 12px !important;
+                padding-left: 12px !important;
+                padding-right: 12px !important;
             }
 
             .projects-heading {
@@ -257,35 +270,6 @@
                 animation-duration: .01ms !important;
                 transition-duration: .01ms !important;
                 scroll-behavior: auto !important;
-            }
-        }
-
-        /* Mobile Navbar Fix */
-        @media (max-width: 767px) {
-            header {
-                position: fixed !important;
-                top: 0 !important;
-                left: 0 !important;
-                right: 0 !important;
-                width: 100% !important;
-                z-index: 9999 !important;
-                padding: 10px 12px !important;
-            }
-
-            header nav {
-                display: flex !important;
-                align-items: center !important;
-                justify-content: space-between !important;
-                width: 100% !important;
-                min-height: 60px !important;
-                padding: 12px 14px !important;
-                gap: 10px !important;
-            }
-
-            header nav>a:last-child {
-                white-space: nowrap !important;
-                font-size: 12px !important;
-                padding: 9px 13px !important;
             }
         }
     </style>
@@ -596,7 +580,7 @@
 
                         <a href="/contact.html"
                             class="inline-block mt-9 rounded-full border border-cyan-400/40 px-8 py-3 text-cyan-300 font-semibold hover:bg-cyan-400 hover:text-slate-950 transition">
-                            Let's Connect â†—
+                            Let's Connect &rarr;
                         </a>
 
                     </div>
@@ -652,6 +636,8 @@
                         <div>
 
                             <h3 class="text-lg font-bold mb-5">
+                                <i class="fa-solid fa-share-nodes text-cyan-400"></i>
+
                                 Connect With Me
                             </h3>
 
@@ -763,4 +749,3 @@
 </body>
 
 </html>
-
